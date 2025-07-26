@@ -14,9 +14,9 @@ describe('User', () => {
     cy.task('generateUser').then((generateUser) => {
       userTarget = generateUser;
       cy.register(userTarget.email, userTarget.username, userTarget.password);
+    });
+    cy.task('generateUser').then((generateUser) => {
       userFollower = generateUser;
-      userFollower.email += 'world';
-      userFollower.username += 'follower';
       cy.register(
         userFollower.email,
         userFollower.username,

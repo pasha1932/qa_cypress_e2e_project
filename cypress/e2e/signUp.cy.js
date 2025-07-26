@@ -16,16 +16,17 @@ describe('Sign Up page', () => {
 
   beforeEach(() => {
     cy.task('db:clear');
+  });
+
+  it('should sign up succefully', () => {
     cy.task('generateUser').then((user) => {
       username = user.username;
       email = user.email;
       password = user.password;
-    });
-  });
 
-  it('should sign up succefully', () => {
-    signInPage.visit();
-    cy.register(email, username, password);
+      signInPage.visit();
+      cy.register(email, username, password);
+    });
   });
 
   it('should not sign up if invalid email', () => {
