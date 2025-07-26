@@ -33,7 +33,7 @@ describe('Sign Up page', () => {
     cy.contains('a', 'Sign up').click();
 
     cy.get('input[placeholder="Username"]').type('Name12345');
-    cy.get('input[placeholder="Email"]').type('invalid email');
+    cy.get('input[placeholder="Email"]').type('invalid email12');
     cy.get('input[placeholder="Password"]').type('123132');
 
     cy.contains('button', 'Sign up').click();

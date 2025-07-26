@@ -1,7 +1,7 @@
 /// <reference types='cypress' />
 /// <reference types='../support' />
 
-import ArticlePageObject from '../support/pages/acticlePage.pageObject';
+import ArticlePageObject from '../support/pages/articlePage.pageObject';
 import SignInPageObject from '../support/pages/signIn.pageObject';
 
 const signInPage = new SignInPageObject();
